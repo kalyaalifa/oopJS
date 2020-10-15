@@ -10,6 +10,7 @@
     <p id="hasil2"></p>
 
     <script type="text/javascript">
+    //cara mendefinisikan objek
         let orang = {
             namaDepan : "Kalya",
             namaBelakang : "Salsabila",
@@ -19,9 +20,10 @@
     delete orang.warnaMata; //menghapus properti
 
     const hasil = document.getElementById("hasil");
+    //cara menampilkan properti objek
     hasil.innerHTML = "Nama : " + orang.namaDepan + " " + orang.namaBelakang + " " + orang.warnaMata + " " + orang.kebangsaan;
 
-//Cara akses pakai array
+    //Cara akses objek via loop
     let pesan = "";
     let id;
     for (id in orang) {
@@ -29,6 +31,7 @@
         console.log("id = "+ id);
         //console.log("orang ")
     }
+    //cara lain mengakses properti objek
     console.log(orang["namaDepan"]);
     const hasil2 = document.getElementById("hasil2");
     hasil2.innerHTML = pesan;
