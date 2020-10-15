@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Class 2</title>
+</head>
+<body>
+    <p id="hasil"></p>
+
+
+    <script>
+        class Buku {
+            constructor (id, judul, pengarang){
+                this.id = id;
+                this.judul = judul;
+                this.pengarang = pengarang;
+            }
+        }
+
+        //membuat objek buku
+        Buku1 = new Buku (001, "Belajar TOEFL", "kampung inggris");
+        let dataBuku1 = 
+        "Id = " + Buku1.id +
+        "<br> Judul = " + Buku1.judul +
+        "<br> Pengarang = " + Buku1.pengarang; 
+
+        Buku2 = new Buku (002, "Belajar JavaScript", "infomedia");
+        let dataBuku2 = "<hr>" +
+        "Id = " + Buku2.id +
+        "<br> Judul = " + Buku2.judul +
+        "<br> Pengarang = " + Buku2.pengarang; 
+
+        //menggabungkan 2 data buku 
+        const hasil = document.getElementById("hasil");
+        hasil.innerHTML = dataBuku1 + dataBuku2;
+
+    </script>
+</body>
+</html>
