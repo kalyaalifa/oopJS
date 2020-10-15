@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Object 1</title>
+</head>
+<body>
+    <p id="hasil"></p>
+    <p id="hasil2"></p>
+
+    <script type="text/javascript">
+        let orang = {
+            namaDepan : "Kalya",
+            namaBelakang : "Salsabila",
+            warnaMata : "coklat"
+        }
+    orang.kebangsaan = "Indonesia"; //menambah properti
+    delete orang.warnaMata; //menghapus properti
+
+    const hasil = document.getElementById("hasil");
+    hasil.innerHTML = "Nama : " + orang.namaDepan + " " + orang.namaBelakang + " " + orang.warnaMata + " " + orang.kebangsaan;
+
+//Cara akses pakai array
+    let pesan = "";
+    let id;
+    for (id in orang) {
+        pesan = pesan + orang[id] + " ";
+        console.log("id = "+ id);
+        //console.log("orang ")
+    }
+    console.log(orang["namaDepan"]);
+    const hasil2 = document.getElementById("hasil2");
+    hasil2.innerHTML = pesan;
+    </script>
+</body>
+</html>
