@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Getter Setter 1</title>
+</head>
+<body>
+    <p id="hasil"></p>
+
+
+    <script>
+        class Mobil {
+            constructor (brand){
+                this.namaMobil = brand;
+            }
+            get nama (){
+                return this.namaMobil;
+            }
+            set nama (x){
+                this.namaMobil = x;
+            }
+        }
+
+        let mobilBaru = new Mobil ("Honda") ;
+        const hasil = document.getElementById("hasil");
+        hasil.innerHTML = mobilBaru.nama;
+
+        mobilBaru.nama = "Toyota";
+        hasil.innerHTML = mobilBaru.nama;
+    </script>
+</body>
+</html>

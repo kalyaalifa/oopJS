@@ -1,0 +1,68 @@
+<!--kalo pake getter-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Class 4</title>
+</head>
+<body>
+    <p>Ini adalah contoh class pada javascript</p>
+    <p id="hasil"></p>
+    <p id="hasil2"></p>
+
+
+    <script type="text/javascript">
+        class Mahasiswa {
+            constructor (nim, namaDepan, namaBelakang, umur){
+                this.nim = nim; // this.nim merujuk ke atribut class mahasiswa, sedangkan = nim merujuk pada atribut pd konstruktor
+                this.namaDepan = namaDepan;
+                this.namaBelakang = namaBelakang;
+                this.umur = umur;
+            }
+            //buat function tampilkan semua data
+            get getNim() {
+                return this.nim;
+            }
+            get getNamaDepan(){
+                return this.namaDepan;
+            }
+            get getNamaBelakang(){
+                return this.namaBelakang;
+            } 
+            get getNamaLengkap(){
+                return this.namaDepan + " " + this.namaBelakang;
+            }
+            get getUmur(){
+                return this.umur;
+            }
+            tampil = () => {
+                return this.getNamaLengkap;
+            }
+        }
+
+        //Sama kaya contoh class 1 tapi diakses pakai method class nya (bukan attribut)
+
+        //class harus buat objeknya
+        objMhs = new Mahasiswa("001", "Kalya", "Salsabila", 22);
+        let dataMhs1 = 
+        "Nim = " + objMhs.getNim + 
+        "<br/> Nama Depan = " + objMhs.getNamaDepan + 
+        "<br/> Nama Belakang = " + objMhs.getNamaBelakang + 
+        "<br/> Umur = " + objMhs.getUmur;
+        
+        
+        objMhs2 = new Mahasiswa ("002","Alan","Walker",24);
+        let dataMhs2 = "<hr>" +
+        "Nim = " + objMhs2.getNim + 
+        "<br/> Nama Depan = " + objMhs2.getNamaDepan + 
+        "<br/> Nama Belakang = " + objMhs2.getNamaBelakang +
+        "<br/> Umur = " + objMhs2.getUmur;
+        
+        //menggabungkan string (concat)
+        const hasil = document.getElementById("hasil");
+        hasil.innerHTML = dataMhs1 + dataMhs2;
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!--arrow func dipakai saat untuk membuat class dan objek-->
+
+<script>
+    function halo1(){
+        return "hallo1";
+    }
+
+    //cara pemanggilan 1
+    hasil1 = halo1();
+    console.log(hasil1);
+
+    //cara pemanggilan 2
+    hallo2 = function () {
+        return "hallo2";
+    }
+    console.log(hallo2());
+
+    //cara pemanggilan 3
+    hallo3 = () => {
+        return "hallo3"
+    }
+    console.log(hallo3());
+
+    hallo4 = (x) => {
+        return x;
+    }
+    console.log(hallo4("hallo4"));
+</script>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Class 2</title>
+</head>
+<body>
+    <p id="hasil"></p>
+
+
+    <script>
+        class Buku {
+            constructor (judul){
+                this.judul = judul;
+            }
+            tampilkan(){
+                return "Buku dengan judul " + this.judul;
+            }
+        }
+
+        class Pengarang extends Buku{
+            constructor (judul, pengarang){
+                super(judul);
+                this.pengarang = pengarang;
+            }
+            show(){
+                return this.tampilkan() + ", dibuat oleh " + this.pengarang;
+            }
+        }
+
+        //membuat objek buku
+        let buku1 = new Pengarang ("Belajar javascript", "Infomedia");
+        let buku2 = new Buku ("Belajar Javascript");
+        document.getElementById("hasil").innerHTML = buku1.show();
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!--Pewarisan-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Inheritance/Pewarisan 1</title>
+</head>
+<body>
+    <p id="hasil"></p>
+
+
+    <script>
+        class Mobil {
+            constructor(merek){
+                this.namaMobil = merek;
+            }
+
+            tampilkan(){
+                return "Merek mobil saya adalah " + this.namaMobil;
+            }
+        }
+
+        class Model extends Mobil {
+            constructor(merek, model) {
+            //karna punya atribut merek, maka ada super yang merefer ke class Mobil utama
+            super(merek); //memanggil constructor dari kelas induk
+                this.model = model;
+            }
+            show(){
+                return this.tampilkan() + ", dg model " + this.model;
+                //method tampilkan didapatkan dari atas
+            }
+        }
+
+        mobilku = new Model("Ford", "Mustang");
+        document.getElementById("hasil").innerHTML = mobilku.show();
+        
+    </script>
+</body>
+</html>
