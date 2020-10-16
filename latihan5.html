@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+    <script>
+        class Hewan{
+            constructor(nama,jenis){
+                this.nama = nama;
+                this._jenis = null;
+            }
+            getJenis(){
+                return `Jenis hewannya adalah ${this._jenis}`;
+            }
+            setJenis (jenis){
+                this._jenis = `${jenis} anak`;
+            }
+        }
+
+        const hewanKucing = new Hewan ("kucing","mamalia");
+        hewanKucing.jenis = "melahirkan";
+        console.log(hewanKucing.jenis);
+        
+
+    </script>
+</body>
+</html>
