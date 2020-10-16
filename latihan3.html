@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan</title>
+</head>
+<body>
+    <p id="hasil"></p>
+
+
+
+    <script>
+        class Angka {
+            constructor(angka1, angka2, angka3){
+                this.angka1 = angka1;
+                this.angka2 = angka2;
+                this.angka3 = angka3;
+            }
+        }
+
+        
+        listAngka1 = new Angka(53,6,70);
+        var cariMin = Math.min.apply(null, listAngka1);
+        var cariMax = Math.min.apply(null,listAngka1);
+        const hasil = document.getElementById("hasil");
+        hasil.innerHTML = "Hasil Diantara " + Object.values(listAngka1) + " Nilai minimalnya adalah " + cariMin + ", dan Nilai maksimalnya adalah " + cariMax;
+    </script>
+</body>
+</html>
